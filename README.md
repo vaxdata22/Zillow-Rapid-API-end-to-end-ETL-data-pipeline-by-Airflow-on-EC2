@@ -1,0 +1,2 @@
+# Zillow-Rapid-API-end-to-end-ETL-data-pipeline-by-Airflow-on-EC2
+This is an end-to-end AWS Cloud ETL project. This data pipeline orchestration uses Apache Airflow on AWS EC2 as well as AWS Lambda. It demonstrates how to build ETL data pipeline that would perform data transformation using Lambda function as well as loading into a Redshift cluster table. The data would then be visualized using Amazon QuickSight.
