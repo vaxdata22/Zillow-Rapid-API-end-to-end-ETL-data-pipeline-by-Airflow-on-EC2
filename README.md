@@ -298,7 +298,7 @@ import requests
 url = "https://zillow56.p.rapidapi.com/search"
 querystring = {"location":"houston, tx","output":"json","status":"forSale","sortSelection":"priorityscore","listing_type":"by_agent","doz":"any"}
 headers = {
-	"x-rapidapi-key": "ebc2a5674emsh71aa8181255e59ap1fc11ejsndd052d48eb35",
+	"x-rapidapi-key": "cwd3d8395jkrs67kk6825725t43bw7hs75edopbi104g19fc28",
 	"x-rapidapi-host": "zillow56.p.rapidapi.com"
 }
 response = requests.get(url, headers=headers, params=querystring)
