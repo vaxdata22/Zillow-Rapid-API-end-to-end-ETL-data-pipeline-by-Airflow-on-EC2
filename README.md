@@ -105,18 +105,28 @@ Two important IAM Roles were needed:
 
 ### STEP 5: Deploying the Lambda functions:
 The orchestration would make use of two Lambda functions:
-1) Name: `move-raw-data-s3-to-copy-data-s3-function`
-   Source bucket: `zillow-etl-data-pipeline-raw-data-bucket`
-   Destination bucket: `zillow-etl-data-pipeline-copy-data-bucket`
+
+#### The 1st Lambda function:
+* Name: `move-raw-data-s3-to-copy-data-s3-function`
+
+* Source bucket: `zillow-etl-data-pipeline-raw-data-bucket`
+
+* Destination bucket: `zillow-etl-data-pipeline-copy-data-bucket`
+
 This first Lambda function would simply copy the JSON file from the source bucket to the destination bucket.
-The Python code for this Lambda function is pretty much straightforward. See the code [here](codes/move-raw-data-s3-to-copy-data-s3-function.py).
+The Python code for this Lambda function is pretty much straightforward. 
+See the code [here](codes/move-raw-data-s3-to-copy-data-s3-function.py).
 
 ![img9](screenshots/img9.png)
 <br><br>
 
-2) Name: `transform-copy-data-s3-to-clean-data-s3-function`
-   Source bucket: `zillow-etl-data-pipeline-copy-data-bucket`
-   Destination bucket: `zillow-etl-data-pipeline-clean-data-bucket`
+#### The 2nd Lambda function:
+* Name: `transform-copy-data-s3-to-clean-data-s3-function`
+
+* Source bucket: `zillow-etl-data-pipeline-copy-data-bucket`
+
+* Destination bucket: `zillow-etl-data-pipeline-clean-data-bucket`
+
 This second Lambda function would perform the data transformation on the JSON file in the source bucket and dump the resulting CSV file in the destination bucket.
 In order to write the code, the response data from an API call was examined in the Rapid API dashboard.
 See the “prettified” JSON response file [here](codes/zillow_api_response_data.json).
@@ -316,19 +326,31 @@ The finished Python file for the orchestration DAG is available [here](codes/zil
 ![img21](screenshots/img21.png)
 <br><br>
 
-This orchestration made use of two necessary Airflow connections which were added via the Airflow GUI:
-1) Connection ID: `aws_new_conn`
-   Connection Type: `Amazon Web Services`
-   AWS Access Key: THE IAM USER ACCESS KEY
-   AWS Secret Access Key: THE IAM USER SECRET ACCESS KEY
+#### This orchestration made use of two necessary Airflow connections which were added via the Airflow GUI:
 
-2) Connection ID: `redshift_new_conn`
-   Connection Type: `Amazon Redshift`
-   Host: `zillow-etl-data-warehouse.cv2nxifps0g9.af-south-1.redshift.amazonaws.com`
-   Database: `dev`
-   User: THE REDSHIFT ADMIN USER NAME
-   Password: THE REDSHIFT ADMIN PASSWORD
-   Port: `5439`
+##### AWS Connection:
+* Connection ID: `aws_new_conn`
+
+* Connection Type: `Amazon Web Services`
+
+* AWS Access Key: THE IAM USER ACCESS KEY
+
+* AWS Secret Access Key: THE IAM USER SECRET ACCESS KEY
+
+##### Redshift Connection:
+* Connection ID: `redshift_new_conn`
+
+* Connection Type: `Amazon Redshift`
+
+* Host: `zillow-etl-data-warehouse.cv2nxifps0g9.af-south-1.redshift.amazonaws.com`
+
+* Database: `dev`
+
+* User: THE REDSHIFT ADMIN USER NAME
+
+* Password: THE REDSHIFT ADMIN PASSWORD
+
+* Port: `5439`
 <br><br>
 
 ### STEP 10: Triggering the DAG and observing the state:
