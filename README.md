@@ -38,8 +38,10 @@ The project was inspired by Dr Yemi Olanipekun, whose tutorials benefitted me a 
 5. Code Editor (I used VSCode) for connecting to EC2 instance to create code (DAG file) on Airflow
   
 6. Apache Airflow for orchestration (authoring of the ETL workflow via DAG) & services connections
+
+7. Good knowledge and skills in data analytics and visualization on Amazon QuickSight tool
   
-7. Perseverance to troubleshoot and resolve errors and failures, read logs, rebuild components, etc
+8. Perseverance to troubleshoot and resolve errors and failures, read logs, rebuild components, etc
 <br><br>
 
 ## STEPS OF THE WORKFLOW
