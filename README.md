@@ -53,7 +53,7 @@ However a person who is knowledgeable in Data Engineering skills should be famil
 By the way the reader who is not knowledgeable in these areas is hereby encouraged to do their own research, enroll in a Data Engineering bootcamp or learn from data engineering tutorials available online on some websites or some great channels on YouTube  (such as Tuple Spectra), or reach out to me for clarification. 
 With that out of the way, let’s go over the key steps in this project.
 
-Having satisfied all the 7 requirements in the preceding section, I proceeded to carry out the following setup:
+Having satisfied all the 8 requirements in the preceding section, I proceeded to carry out the following setup:
 <br><br>
 
 ### STEP 1: Zillow Rapid API set up:
