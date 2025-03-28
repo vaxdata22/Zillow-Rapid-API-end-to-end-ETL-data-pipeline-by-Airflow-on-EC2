@@ -411,6 +411,7 @@ https://airflow.apache.org/docs/apache-airflow-providers-amazon/stable/_api/airf
 https://airflow.apache.org/docs/apache-airflow-providers-amazon/stable/transfer/s3_to_redshift.html 
 
 https://airflow.apache.org/docs/apache-airflow-providers-amazon/1.0.0/operators/s3_to_redshift.html 
+<br><br>
 
 Cover Image credit: Tuple Spectra channel on Youtube.
 
