@@ -45,7 +45,7 @@ The project was inspired by Dr Yemi Olanipekun, whose tutorials benefitted me a 
 <br><br>
 
 ## STEPS OF THE WORKFLOW
-The following account of the project development process is not enough to enable the reader code along or replicate the whole process from start to finish. 
+The following account of the project development process may not be enough to enable the reader code along or replicate the whole process from start to finish. 
 For instance, there is no detailing of the steps involved in creating accounts with Rapid API and Amazon AWS. 
 There is also no detailing of the steps in creating an IAM User and creating the required IAM Roles that would later be used by EC2 and Lambda, setting up the S3 buckets, deploying the Lambda functions along with their IAM Role, setting up Redshift data warehouse cluster and connecting QuickSight to it, spinning up the AWS EC2 instance from scratch and preparing it to work with Airflow (Firewall settings for HTTP/HTTPS/SSH and attaching the IAM Role), connecting VSCode to the EC2 instance, as well as accessing Airflow via web browser.
 
